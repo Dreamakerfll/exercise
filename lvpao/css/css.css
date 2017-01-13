@@ -1,0 +1,49 @@
+*{
+    padding: 0px;
+    margin:0px;
+}
+
+.top_img{
+    background-image: url("../images/lvpao_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    padding-top:calc(424/640*100%);
+    width:100%;
+}
+
+.ul_item ul{
+    width:100%;
+    display:inline-table;
+}
+
+.ul_item ul li{
+    width:calc(100%/3);
+    list-style: none;
+    float:left;
+    text-align: center;
+}
+
+
+
+.ul_item ul li p{
+    color: #ffffff;
+    background-color: #65a13f;
+    padding: 0.4rem 0;
+    border-right: 1px solid #fff;
+}
+
+
+.active{
+    background-color:#e27d1d !important;
+}
+
+
+#form1{
+    display: none;
+}
+
+#form2{
+    display: none;
+}

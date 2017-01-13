@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <title>angularJs练习</title>
+    <script src="../libs/jquery-3.0.0.min.js" type="application/javascript"></script>
+    <link href="../libs/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <script src="../libs/angular.min.js" type="application/javascript"></script>
+    <script src="js/angularJsDemo.js" type="application/javascript"></script>
+</head>
+<body ng-app="myApp">
+    <div class="container">
+        <article>表单内容</article>
+        <del>这里是删除的内容</del>
+        <blockquote>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        </blockquote>
+
+        <form role="form" ng-controller="MainController">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" ng-model="email1">
+            </div>
+            <a class="btn btn-primary" ng-click="setEmail();">设置邮箱</a>
+            <a class="btn btn-warning" ng-click="reSet();">重置</a>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputFile">File input</label>
+                <input type="file" id="exampleInputFile">
+                <p class="help-block">Example block-level help text here.</p>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Check me out
+                </label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <div ng-controller="playController">
+            <button ng-click="play()" class="button" ng-show="!playing">Play</button>
+            <button ng-click="stop()" class="button alert" ng-show="playing">Stop</button>
+            Playing audio: <b>{{ playing }}</b>
+        </div>
+
+        <div ng-controller="MyController">
+            <h5>{{ clock }}</h5>
+        </div>
+
+
+        <div ng-init="person='xiaoming'">{{person}}</div>
+        <div ng-init="showFlag=true" ng-click="showFlag=!showFlag">
+            <button ng-show="showFlag">show {{showFlag}}</button>
+            <button ng-hide="showFlag">hide {{showFlag}}</button>
+        </div>
+
+        <div ng-controller="repeatContorller">
+            <ul>
+                <li ng-repeat="person in persons">{{person.name}}</li>
+            </ul>
+        </div>
+
+        <input type="text" ng-model="result"/>
+        <div ng-diy-tem ng-model="result"></div>
+
+        <div ng-controller="serviceController">
+            <label for="username">用户名</label>
+            <input type="text" id="username" ng-model="username" placeholder="请输入用户名"/>
+            <pre ng-show="username">{{events}}</pre>
+        </div>
+    </div>
+
+
+</body>
+</html>
